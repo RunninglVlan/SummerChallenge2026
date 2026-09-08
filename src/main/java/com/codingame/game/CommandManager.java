@@ -53,7 +53,7 @@ public class CommandManager {
                 throw e;
             }
 
-        } catch (InvalidInputException e) {
+        } catch (Exception e) {
             deactivatePlayer(player, e.getMessage());
             gameManager.addToGameSummary(e.getMessage());
             gameManager.addToGameSummary(GameManager.formatErrorMessage(player.getNicknameToken() + ": disqualified!"));
