@@ -330,6 +330,7 @@
 					, cette région est <b>effacée à l’encre</b>, supprimant tout <b>rails</b> placées et rendant tout placement futur dessus <b>impossible</b>. Toute connexion active passant par cette région sera rompue.
 				</p>
 				<p>Il n’est pas possible de perturber une région qui est déjà <b>effacée à l’encre</b>.</p>
+				<p>Les régions contenant une ville ne peuvent pas être perturbées.</p>
 				<!-- BEGIN level2 -->
 			</div>
 			<!-- END -->
@@ -454,10 +455,10 @@
 				</h2>
 				<div class="statement-expert-rules-content">
 					<ul style="padding-left: 20px;padding-bottom: 0">
-						<!-- <li>
+						<li>
 							Vous pouvez consulter le code source de ce jeu sur <a rel="nofollow" target="_blank"
-							href="https://github.com/CodinGame/SpringChallenge2020">ce dépôt GitHub</a>.
-							</li> -->
+							href="https://github.com/CGjupoulton/SummerChallenge2026">ce dépôt GitHub</a>.
+						</li>
 						<li>
 							Toutes les actions 
 							<action>PLACE_TRACKS</action>

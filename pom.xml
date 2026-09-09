@@ -7,7 +7,7 @@
 	<version>1.0-SNAPSHOT</version>
 
     <properties>
-        <gamengine.version>4.6.0</gamengine.version>
+        <gamengine.version>4.7.8</gamengine.version>
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>

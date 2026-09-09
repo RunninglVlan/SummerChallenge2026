@@ -368,6 +368,7 @@
 					on it <b>impossible</b>. Any active connections via this region will be severed.
 				</p>
 				<p>It is not possible to disrupt a region that is already <b>inked out</b>.</p>
+				<p>Regions with a town cannot be disrupted.</p>
 				<!-- BEGIN level2 -->
 			</div>
 			<!-- END -->
@@ -478,7 +479,7 @@
 						</ul>
 						<!-- END -->
 						<!-- BEGIN level3 -->
-						Your program does not provide a command in the alloted time or one
+						Your program does not provide a command in the allotted time or one
 						of the commands is invalid.
 						<!-- END -->
 					</div>
@@ -494,10 +495,10 @@
 				</h2>
 				<div class="statement-expert-rules-content">
 					<ul style="padding-left: 20px;padding-bottom: 0">
-						<!-- <li>
+						<li>
 							You can check out the source code of this game <a rel="nofollow" target="_blank"
-							href="https://github.com/CodinGame/SpringChallenge2020">on this GitHub repo</a>.
-							</li> -->
+							href="https://github.com/CGjupoulton/SummerChallenge2026">on this GitHub repo</a>.
+						</li>
 						<li>
 							All 
 							<action>PLACE_TRACKS</action>
