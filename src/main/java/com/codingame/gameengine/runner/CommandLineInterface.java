@@ -12,7 +12,7 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
 
-import com.codingame.gameengine.runner.dto.GameResult;
+import com.codingame.gameengine.runner.dto.GameResultDto;
 import com.google.common.io.Files;
 
 public class CommandLineInterface {
@@ -39,14 +39,14 @@ public class CommandLineInterface {
 				System.exit(0);
 			}
 
-			GameRunner runner = new GameRunner();
+			MultiplayerGameRunner runner = new MultiplayerGameRunner();
 
 			Field getGameResult = GameRunner.class.getDeclaredField("gameResult");
 			getGameResult.setAccessible(true);
-			GameResult result = (GameResult) getGameResult.get(runner);
+			GameResultDto result = (GameResultDto) getGameResult.get(runner);
 
 			if (cmd.hasOption("d")) {
-				result.refereeInput = cmd.getOptionValue("d");
+				result.uinput.add(cmd.getOptionValue("d"));
 			}
 
 			int playerCount = 0;
@@ -65,7 +65,7 @@ public class CommandLineInterface {
 				initialize.setAccessible(true);
 				initialize.invoke(runner, new Properties());
 
-				Method run = GameRunner.class.getDeclaredMethod("run");
+				Method run = GameRunner.class.getDeclaredMethod("start");
 				run.setAccessible(true);
 				run.invoke(runner);
 
