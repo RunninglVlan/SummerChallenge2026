@@ -38,3 +38,7 @@ This is a local web server where you can inspect the games. Next lines shows whe
 For some reason asset paths are broken and the viewer just shows black rectangle, so a temporary fix is to just copy everything that's in /assets folder, create one more /assets folder inside it and paste everything there.
 
 It might be a bug, but you might need to stop the server manually when you don't need it anymore.
+
+### Inspect any game from the list
+
+Web server will show the latest played game. To inspect any other game, copy desired game.json from the logs (that can be generated with `-l` option, e.g., `-l ".\logs\"`, just create logs folder beforehand) and replace the one in server folder.
