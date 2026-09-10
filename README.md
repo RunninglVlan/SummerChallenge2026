@@ -6,7 +6,7 @@ https://www.codingame.com/contests/summer-challenge-2026-back-track-king
 
 ## Build
 
-- Install Java 17 and Maven
+- Install Java 17 (JDK) and Maven
 - Run `mvn package` in the root dir where pom.xml file is
 
 The compiled jar file is in ./target/summer-challenge-2026-back-track-king-1.0-SNAPSHOT.jar
