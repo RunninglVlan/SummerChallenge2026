@@ -32,8 +32,9 @@ java -jar cg-brutaltester-1.0.0.jar -r "java -Dleague.level=3 -jar .\target\summ
 
 ## Inspect games
 
-After running games you will see `http://localhost:8888/test.html` in the console.
-This is a local web server where you can inspect the games. Next lines shows where it is located on your system.
+To inspect games, you need to start web-server, you can do that with -s option passed to referee jar (not brutaltester itself).
+You will get `http://localhost:8888/test.html` in the console.
+This is a local web server where you see replays of your games. Next line shows where it is located on your system.
 
 For some reason asset paths are broken and the viewer just shows black rectangle, so a temporary fix is to just copy everything that's in /assets folder, create one more /assets folder inside it and paste everything there.
 
