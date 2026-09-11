@@ -23,23 +23,20 @@ This is a sample command that works, you can change options as described in the 
 java -jar cg-brutaltester-1.0.0.jar -r "java -jar .\target\summer-challenge-2026-back-track-king-1.0-SNAPSHOT.jar" -p1 ".\YourBot.exe" -p2 "python `.\config\level2\Boss.py" -t 1 -n 5
 ```
 
-It might be a bug, but it might work only after 2nd time running the command (might need running web-server).
-
 Use `-Dleague.level=3` to run Bronze league logic - without tutorial objectives.
 ```
 java -jar cg-brutaltester-1.0.0.jar -r "java -Dleague.level=3 -jar .\target\summer-challenge-2026-back-track-king-1.0-SNAPSHOT.jar" -p1 ".\YourBot.exe" -p2 "python `.\config\level2\Boss.py" -t 1 -n 5
 ```
 
-## Inspect games
+## How to fix black rectangle in web-server
 
-To inspect games, you need to start web-server, you can do that with -s option passed to referee jar (not brutaltester itself).
-You will get `http://localhost:8888/test.html` in the console.
-This is a local web server where you see replays of your games. Next line shows where it is located on your system.
-
+When there's an issue with a game, brutaltester will show you the command to start web-server and see the replay. It can look like this:
+```
+java -jar .\target\summer-challenge-2026-back-track-king-1.0-SNAPSHOT.jar -p1 .\BotNew.exe -p2 .\BotOld.exe -l .\logs/game99.json -s -d seed=-4886859088243244127
+```
+Referee then will show web-server link and its local folder.
 For some reason asset paths are broken and the viewer just shows black rectangle, so a temporary fix is to just copy everything that's in /assets folder, create one more /assets folder inside it and paste everything there.
 
-It might be a bug, but you might need to stop the server manually when you don't need it anymore.
+## See the replay of any game
 
-### Inspect any game from the list
-
-Web server will show the latest played game. To inspect any other game, copy desired game.json from the logs (that can be generated with `-l` option, e.g., `-l ".\logs\"`, just create logs folder beforehand) and replace the one in server folder.
+When the web-server is running, you can make it replay any of your games, just copy the desired game.json from the logs (that can be generated with `-l` option, e.g., `-l ".\logs\"`, just create logs folder beforehand), replace the one in server folder, and reload viewer page.
