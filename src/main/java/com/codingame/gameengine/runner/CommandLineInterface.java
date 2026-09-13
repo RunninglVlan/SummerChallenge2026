@@ -5,7 +5,6 @@ import java.lang.reflect.Method;
 import java.nio.charset.Charset;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Properties;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.DefaultParser;
@@ -24,8 +23,6 @@ public class CommandLineInterface {
 			options.addOption("h", false, "Print the help")
 			       .addOption("p1", true, "Required. Player 1 command line.")
 			       .addOption("p2", true, "Required. Player 2 command line.")
-			       .addOption("p3", true, "Player 3 command line.")
-			       .addOption("p4", true, "Player 4 command line.")
 			       .addOption("s", false, "Server mode")
 			       .addOption("l", true, "File output for logs")
 			       .addOption("d", false, "Referee initial data");
