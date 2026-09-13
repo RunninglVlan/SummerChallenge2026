@@ -24,10 +24,10 @@ java -jar cg-brutaltester.jar -r "java -jar summer-referee.jar" -p1 "new\Bot.exe
 ```
 Negative score for opponent is OK here, because we win just by completing the objective.
 
-Use `-Dleague.level=3` to run Bronze league logic - without tutorial objectives.
+Use `-league 3` to run Bronze league logic - without tutorial objectives.
 
 ```
-java -jar cg-brutaltester.jar -r "java -Dleague.level=3 -jar summer-referee.jar" -p1 "new\Bot.exe" -p2 "python config\level2\Boss.py" -t 2 -n 10
+java -jar cg-brutaltester.jar -r "java -jar summer-referee.jar -league 3" -p1 "new\Bot.exe" -p2 "python config\level2\Boss.py" -t 2 -n 10
 ```
 
 ## How to fix black rectangle in web-server

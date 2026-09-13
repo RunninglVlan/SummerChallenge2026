@@ -23,6 +23,7 @@ public class CommandLineInterface {
 			options.addOption("h", false, "Print the help")
 			       .addOption("p1", true, "Required. Player 1 command line.")
 			       .addOption("p2", true, "Required. Player 2 command line.")
+                   .addOption("league", true, "League level")
 			       .addOption("s", false, "Server mode")
 			       .addOption("l", true, "File output for logs")
 			       .addOption("d", false, "Referee initial data");
@@ -37,6 +38,10 @@ public class CommandLineInterface {
 			}
 
 			MultiplayerGameRunner runner = new MultiplayerGameRunner();
+
+            if (cmd.hasOption("league")) {
+                runner.setLeagueLevel(Integer.valueOf(cmd.getOptionValue("league")));
+            }
 
 			Field getGameResult = GameRunner.class.getDeclaredField("gameResult");
 			getGameResult.setAccessible(true);
