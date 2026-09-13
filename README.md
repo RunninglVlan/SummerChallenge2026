@@ -30,13 +30,22 @@ Use `-league 3` to run Bronze league logic - without tutorial objectives.
 java -jar cg-brutaltester.jar -r "java -jar summer-referee.jar -league 3" -p1 "new\Bot.exe" -p2 "python config\level2\Boss.py" -t 2 -n 10
 ```
 
+## See the replay of failed game
+
+When there's an issue with a game, cg-brutaltester will show you the command to start web-server and see the replay. It can look like this:
+```
+java -jar summer-referee.jar -p1 new\Bot.exe -p2 python config\level2\Boss.py -s -d
+seed=-6047263144251189400
+```
+Modify it a bit and run:
+```
+java -jar summer-referee.jar -p1 new\Bot.exe -p2 python config\level2\Boss.py -s -seed -6047263144251189400
+```
+Referee then will show web-server link where you can see the replay.
+
 ## How to fix black rectangle in web-server
 
-When there's an issue with a game, brutaltester will show you the command to start web-server and see the replay. It can look like this:
-```
-java -jar .\target\summer-challenge-2026-back-track-king-1.0-SNAPSHOT.jar -p1 .\BotNew.exe -p2 .\BotOld.exe -l .\logs/game99.json -s -d seed=-4886859088243244127
-```
-Referee then will show web-server link and its local folder.
+After starting referee with `-s` option, web-server will be started and referee will show its local folder.
 For some reason asset paths are broken and the viewer just shows black rectangle, so a temporary fix is to just copy everything that's in /assets folder, create one more /assets folder inside it and paste everything there.
 
 ## See the replay of any game
