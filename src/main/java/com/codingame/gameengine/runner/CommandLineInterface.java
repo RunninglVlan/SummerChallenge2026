@@ -27,7 +27,7 @@ public class CommandLineInterface {
                    .addOption("league", true, "League level")
 			       .addOption("s", false, "Server mode")
 			       .addOption("l", true, "File output for logs")
-			       .addOption("d", false, "Referee initial data");
+			       .addOption("d", true, "Referee initial data");
 
 			CommandLine cmd = new DefaultParser().parse(options, args);
 
@@ -53,7 +53,12 @@ public class CommandLineInterface {
 			GameResultDto result = (GameResultDto) getGameResult.get(runner);
 
 			if (cmd.hasOption("d")) {
-				result.uinput.add(cmd.getOptionValue("d"));
+				String data = cmd.getOptionValue("d");
+				if (data.startsWith("seed=")) {
+					runner.setSeed(Long.valueOf(data.substring(5)));
+				} else {
+					result.uinput.add(data);
+				}
 			}
 
 			int playerCount = 0;
